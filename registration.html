@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+</head>
+
+<body>
+    <h1>Event Registration Form</h1>
+
+    <form id="registrationForm">
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+
+        <label for="event">Select Event:</label>
+        <select id="event" name="event">
+            <option value="coding">Coding Competition</option>
+            <option value="quiz">Technical Quiz</option>
+            <option value="workshop">Workshop</option>
+        </select>
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <br><br>
+
+        <label for="date">Event Date:</label>
+        <input type="date" id="date" name="date">
+        <br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+
+    </form>
+
+    <h3 id="message"></h3>
+
+    <script>
+        document.getElementById("registrationForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("message").innerHTML =
+            "Registration Successful!";
+
+            document.getElementById("message").style.color = "green";
+
+        });
+    </script>
+
+</body>
+</html>
